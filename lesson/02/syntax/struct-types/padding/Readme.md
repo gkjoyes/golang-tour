@@ -47,3 +47,10 @@
 - Here we need 3 bytes padding as shown below.
 
     ![Structure Padding](https://github.com/gkjoyes/golang-tour/blob/master/lesson/02/syntax/struct-types/padding/images/structure-padding.png)
+
+## Examples
+
+- [Structure padding in 32-bit architecture](https://github.com/gkjoyes/golang-tour/blob/master/lesson/02/syntax/struct-types/padding/example1/example1.go)
+- [Structure padding in 64-bit architecture](https://github.com/gkjoyes/golang-tour/blob/master/lesson/02/syntax/struct-types/padding/example2/example2.go)
+- [Structure padding without specifying ARCH](https://github.com/gkjoyes/golang-tour/blob/master/lesson/02/syntax/struct-types/padding/example2/example2.go)
+
