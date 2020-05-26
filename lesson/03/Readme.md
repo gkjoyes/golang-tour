@@ -18,4 +18,3 @@ Design Philosophy:
 - Coupling data together and writing code that produces predictable access patterns to the data will be the most performant.
 - Changing data layouts can yield more significant performance improvements than changing just the algorithms.
 - Efficiency is obtained through algorithms but performance is obtained through data structures and layouts.
-
