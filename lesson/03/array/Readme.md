@@ -8,3 +8,10 @@ Arrays are a special data structure in Go that allows us to allocate contiguous 
 - Memory is allocated as a contiguous block.
 - Copies refer to different underlying data.
 - Access via zero-based index.
+
+## Examples
+
+- [Declare, Initialize and Iterate](https://github.com/gkjoyes/golang-tour/blob/master/lesson/03/array/example1/example1.go)
+- [Different type arrays](https://github.com/gkjoyes/golang-tour/blob/master/lesson/03/array/example2/example2.go)
+- [Contiguous memory allocation](https://github.com/gkjoyes/golang-tour/blob/master/lesson/03/array/example3/example3.go)
+- [Range mechanics](https://github.com/gkjoyes/golang-tour/blob/master/lesson/03/array/example4/example4.go)
