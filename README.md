@@ -5,6 +5,7 @@ A Tour of Go
 - Lesson 02: Language Syntax
   - [Variables](https://github.com/gkjoyes/golang-tour/blob/master/lesson/02/syntax/variables/readme.md)
   - [Struct Types](https://github.com/gkjoyes/golang-tour/blob/master/lesson/02/syntax/struct-types/Readme.md)
+  - [Structure Padding](https://github.com/gkjoyes/golang-tour/tree/master/lesson/02/syntax/struct-types/padding)
   - [Pointers](https://github.com/gkjoyes/golang-tour/blob/91a0a21bf54161ad63c2cd4f0212c75204c2151c/lesson/02/syntax/pointers/Readme.md)
   - [Constants](https://github.com/gkjoyes/golang-tour/blob/fbbbc529947aba5e079ea09f66f88b22c43f4d71/lesson/02/syntax/constants/Readme.md)
 - Lesson 03: Data Structures
