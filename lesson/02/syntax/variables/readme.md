@@ -2,29 +2,37 @@
 
 ## Variables
 
-Variables are at the heart of the language and provide the ability to read from and write to memory. In Go, access to memory is type safe. This means the compiler takes type seriously and will not allow us to use variables
-outside the scope of how they are declared.
+Variables are at the heart of the language and provide the ability to read from and write to memory. In Go, access to memory is type safe. This means the compiler takes type seriously and will not allow us to use variables outside the scope of how they are declared.
 
-- There is two-way to declare and initialize a variable:
-  - Using the var keyword (`var foo int`).
-  - Using the short-hand operator (`foo := 20`).
+### Declare and Initialize
 
-- We can't redeclare variables but can shadow them.
+- There are two ways to declare and initialize variables, using the `var` keyword and short-hand operator `:=`.
 
-- Visibility
-  - Variables declared inside a function or block cannot be accessed outside the function or block.
-  - Package level variables with the first letter starting with lowercase are only available in that package.
-  - Package level variables with the first letter starting with uppercase are for exporting.
+```go
+    var foo int
 
-- Naming conventions
-  - __Pascal__ or __Camel__ case.
-  - Capitalize acronyms (HTTP, URL etc...)
-  - As short as reasonable.
-  - Longer names for longer lives.
+    foo := 20
+```
 
-- Type conversion
-  - T(v) converts the value v to the type T.
-  - Use __strconv__ package for strings.s
+- We can't redeclare variables but can [shadow](https://play.golang.org/p/DfLdVlFopd4) them.
+
+### Visibility
+
+- Variables declared inside a function or block cannot be accessed outside the function or block.
+- Package level variables with the first letter starting with lowercase are only available in that package.
+- Package level variables with the first letter starting with uppercase are for exporting.
+
+### Naming conventions
+
+- There are two naming standards we are following in Go, `Pascal` or `Camel` case.
+- Capitalize acronyms (HTTP, URL etc...)
+- As short as reasonable.
+- Longer names for longer lives.
+
+### Type conversion
+
+- `T(v)` converts the value `v` to the type `T`.
+- Use [strconv](https://golang.org/pkg/strconv/) package for strings.
 
 ## Examples
 
