@@ -37,7 +37,3 @@ Variables are at the heart of the language and provide the ability to read from 
 ## Examples
 
 - [Declare and Initialize variable](https://github.com/george-kj/golang-tour/lesson/02/syntax/variables/example.go)
-
-## Reference
-
-- [Unlimited Go by William Kennedy](https://learning.oreilly.com/videos/ultimate-go-programming/9780135261651/9780135261651-UGP2_01_02_01)
