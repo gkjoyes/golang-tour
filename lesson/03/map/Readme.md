@@ -21,7 +21,7 @@ Maps provide a data structure that allows for the storage and management of key/
 
 ## Macro view of the map
 
-[Maps](https://github.com/golang/go/blob/master/src/runtime/map.go) in Go are implemented as a [hash table](https://en.wikipedia.org/wiki/Hash_table). The hash table for a Go map is structured as an array of buckets. The number of buckets is always equal to a power 2. When performing a map operation such as adding a key/value pair, a hash key is generated against the specified key. The low order bits(LOB) of the generated hash key is used to select a bucket.
+[Maps](https://github.com/golang/go/blob/master/src/runtime/map.go#L115) in Go are implemented as a [hash table](https://en.wikipedia.org/wiki/Hash_table). The hash table for a Go map is structured as an array of buckets. The number of buckets is always equal to a power of 2. When performing a map operation such as adding a key/value pair, a hash key is generated against the specified key. The low order bits(LOB) of the generated hash key is used to select a bucket.
 
 ![Buckets](https://github.com/gkjoyes/golang-tour/blob/master/lesson/03/map/images/buckets.png)
 
@@ -33,7 +33,7 @@ When you are iterating through the map, the iterator will select [bucket](https:
 
 ### Memory and Bucket Overflow
 
-There is a reason the key/value pairs are packed like this in a single byte array. If the keys and values were stored like key/value/key/value, padding allocations between each key/value pair would be needed to maintain proper [alignment boundaries](https://github.com/gkjoyes/golang-tour/tree/master/lesson/02/syntax/struct-types/padding).
+There is a reason the key/value pairs are packed like this in a single byte array. If the keys and values were stored like key/value/key/value, padding allocations would be needed between each key/value pair to maintain proper [alignment boundaries](https://github.com/gkjoyes/golang-tour/tree/master/lesson/02/syntax/struct-types/padding).
 
 An example where this would apply is with a map that looks like this:
 
@@ -62,6 +62,18 @@ Then a new bucket array has been allocated to hold twice the number of existing 
 Once the memory for the new bucket is available, the key/value pairs from the old bucket array can be moved or "evacuated" to the new bucket array. The key/value pairs that are together in an old bucket could be moved to different buckets inside the new bucket array. The evacuation algorithm attempts to distribute the key/value pairs evenly across the new bucket array.
 
 This is a very delicate dance because iterators still need to run through the old buckets until every old bucket has been evacuated. This also affects the performance of iteration operations.
+
+### Map in other languages
+
+![map-in-other-languages](https://github.com/gkjoyes/golang-tour/blob/master/lesson/03/map/images/map-in-other-languages.png)
+
+### Speed
+
+![Speed](https://github.com/gkjoyes/golang-tour/blob/master/lesson/03/map/images/speed.png)
+
+### Size
+
+![size](https://github.com/gkjoyes/golang-tour/blob/master/lesson/03/map/images/size.png)
 
 ## Reference
 
