@@ -2,7 +2,6 @@
 
 Pointers provide a way to share data across program boundaries. Having the ability to share and reference data with a pointer provides the benefit of efficiency. There is only one copy of the data and everyone can see it changing. The cost is that anyone can change the data which can cause side effects in the running program.
 
-- Use pointers to share data.
 - Values in Go are always pass by value.
 - The `*` operator declares a pointer variable.
 - `new` allocates zeroed storage in memory and returns a pointer to it.
